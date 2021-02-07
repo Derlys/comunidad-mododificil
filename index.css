@@ -38,14 +38,14 @@ ul:hover {
   color: white;
   text-decoration: none;
 }
-.header__menu li a:hover{
-text-decoration: underline;
+.header__menu li a:hover {
+  text-decoration: underline;
 }
 .header__menu--profile {
   margin-top: 5px;
   display: flex;
 }
-.header__menu--profile img{
+.header__menu--profile img {
   width: 35px;
 }
 body {
@@ -57,15 +57,15 @@ body {
   );
   font-family: "Mulish", sans-serif;
 }
-.main{
-  height:300px ;
+.main {
+  height: 300px;
 }
-.main__title{
+.main__title {
   color: white;
   font-size: 25px;
 }
-.input{
-  background-color: rgba(255, 255,255, 0.1);
+.input {
+  background-color: rgba(255, 255, 255, 0.1);
   border: 2px solid white;
   border-radius: 25px 10px;
   color: white;
@@ -76,6 +76,64 @@ body {
   width: 70%;
   outline: none;
 }
-::placeholder{
+::placeholder {
   color: white;
+}
+.carousel {
+  width: 100%;
+  overflow: scroll;
+  padding: 30px;
+  position: relative;
+}
+.carousel__container {
+  white-space: nowrap;
+  margin: 70px 0px;
+  padding-bottom: 10px;
+}
+.carousel-item {
+  background-color: yellow;
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-right: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 450ms;
+  transform-origin: center left;
+  position: relative;
+}
+.carousel-item:hover ~ {
+  transform: translate3d(100%, 0, 0);
+}
+.carousel__container:hover .carousel-item {
+  opacity: 0.3;
+}
+.carousel__container:hover .carousel-item:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+.carousel-item__img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+}
+.corousel-item__details {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  font-size: 10px;
+  opacity: 0px;
+  transition: 450ms opacity;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.carouse-item__details:hover{
+  opacity: 1px;
 }
